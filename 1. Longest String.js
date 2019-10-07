@@ -34,6 +34,20 @@ console.log(longestString(strings1)); // <--- 'really, really long!'
 const strings2 = ['short', 'first long string!!', 'medium', 'abcdefghijklmnopqr'];
 console.log(longestString(strings2)); // <--- 'first long string!'
 
+// ++ Model Solution
+
+function longestString(arr) {
+	let result = '';
+	for(let index = 0; index < arr.length; index++) {
+	  let currentItem = arr[index];
+		if(currentItem.length > result.length) {
+			result = arr[index];
+		}
+	}
+	return result;
+}
+
+
 // ++ Practice
   function longestString(arr) {
     let longString = '';
